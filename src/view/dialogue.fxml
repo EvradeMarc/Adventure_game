@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFacade.Dialogue">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" focusTraversable="true" height="331.0" layoutX="18.0" layoutY="14.0" stroke="#b7a5a5" strokeType="INSIDE" width="563.0" />
+      <Label layoutX="68.0" layoutY="29.0" prefHeight="28.0" prefWidth="41.0" textAlignment="JUSTIFY">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="dialogFinish" layoutX="451.0" layoutY="361.0" mnemonicParsing="false" onAction="#goToChooseClasse" prefHeight="26.0" prefWidth="122.0" text="Suivant" />
+      <Text fx:id="nameField" layoutX="77.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+      <Text layoutX="121.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text=", tu te souviens ce qui s'est passé ?" />
+      <TextFlow layoutX="79.0" layoutY="83.0" prefHeight="58.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="On s'est fait attaqué par une horde de monstre j'ai réussi grâce à ton frère à te ramener jusqu'ici." />
+         </children>
+      </TextFlow>
+      <Text layoutX="449.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous : Non" />
+      <TextFlow layoutX="79.0" layoutY="260.0" prefHeight="17.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="secondNPCResponse" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </TextFlow>
+      <Text layoutX="450.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous :" visible="false" />
+      <VBox layoutX="438.0" layoutY="150.0" prefHeight="58.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="answerWhoAreYouButton" mnemonicParsing="false" onAction="#answerWhoAreYou" prefHeight="26.0" prefWidth="103.0" text="Qui êtes vous ?" />
+            <Button fx:id="answerBrotherButton" mnemonicParsing="false" onAction="#answerBrother" prefHeight="26.0" prefWidth="103.0" text="Et mon frère ?" />
+         </children>
+      </VBox>
+      <Text fx:id="firstResponse" layoutX="449.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous" visible="false" />
+      <Text fx:id="secondResponse" layoutX="449.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous" visible="false" />
+      <TextFlow layoutX="79.0" layoutY="180.0" prefHeight="17.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="firstNPCResponse" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

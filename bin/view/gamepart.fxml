@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFacade.GamePart">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" focusTraversable="true" height="261.0" layoutX="18.0" layoutY="36.0" stroke="#b7a5a5" strokeType="INSIDE" width="402.0" />
+      <Button fx:id="useItemButton" layoutX="451.0" layoutY="361.0" mnemonicParsing="false" onAction="#useItem" prefHeight="26.0" prefWidth="122.0" text="Utiliser" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" focusTraversable="true" height="187.0" layoutX="434.0" layoutY="35.0" stroke="#b7a5a5" strokeType="INSIDE" width="174.0" />
+      <Text layoutX="441.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso" wrappingWidth="130.1365966796875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="mainMenuButton" layoutX="39.0" layoutY="308.0" mnemonicParsing="false" onAction="#goToMainMenu" prefHeight="26.0" prefWidth="102.0" text="Menu Principal" />
+      <Button fx:id="exploreButton" layoutX="175.0" layoutY="308.0" mnemonicParsing="false" onAction="#Explore" prefHeight="26.0" prefWidth="102.0" text="Explorer" />
+      <Button fx:id="saveButton" layoutX="300.0" layoutY="308.0" mnemonicParsing="false" onAction="#saveTheGame" prefHeight="26.0" prefWidth="102.0" text="Sauvegarder" />
+      <TextFlow layoutX="440.0" layoutY="39.0" prefHeight="177.0" prefWidth="162.0">
+         <children>
+            <Text fx:id="persoInfo" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </TextFlow>
+      <ListView fx:id="inventoryView" layoutX="434.0" layoutY="249.0" prefHeight="104.0" prefWidth="174.0" style="-fx-border-color: b7a5a5;" />
+      <Pane fx:id="meetEnemyPane" layoutX="122.0" layoutY="63.0" prefHeight="130.0" prefWidth="194.0" style="-fx-border-style: solid; -fx-border-color: b7a5a5;">
+         <children>
+            <Button layoutX="46.0" layoutY="90.0" mnemonicParsing="false" onAction="#goToFight" prefHeight="26.0" prefWidth="102.0" text="Combattre">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="36.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous rencontrez un ennemi" textAlignment="CENTER" wrappingWidth="130.1365966796875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="441.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventaire" wrappingWidth="130.1365966796875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="nextPlace" layoutX="249.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToNextPlace" prefHeight="26.0" prefWidth="102.0" text="Lieu Suivant" />
+      <Text fx:id="placeName" layoutX="19.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Lieu" wrappingWidth="130.1365966796875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="previousPlace" layoutX="90.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToPreviousPlace" prefHeight="26.0" prefWidth="102.0" text="Lieu Précédent" />
+      <TextFlow layoutX="29.0" layoutY="235.0" prefHeight="48.0" prefWidth="186.0">
+         <children>
+            <Text fx:id="receiveObject" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous avez ramassé un objet" wrappingWidth="164.53656005859375">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="291.0" layoutY="264.0" prefHeight="32.0" prefWidth="122.0">
+         <children>
+            <Text fx:id="progressionField" strokeType="OUTSIDE" strokeWidth="0.0" text="Progession : 0%" wrappingWidth="88.53656005859375">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>
