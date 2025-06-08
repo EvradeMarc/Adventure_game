@@ -1,3 +1,4 @@
+-- Nouvelle Partie --
 CREATE TABLE boss(
    id_boss INT AUTO_INCREMENT,
    nom VARCHAR(50),
@@ -45,7 +46,7 @@ CREATE TABLE enemy(
 );
 
 
-
+-- Tables utilisées pour la sauvegarde des données (Sauvegarde de la partie) --
 CREATE TABLE boss_save(
    id_boss INT,
    nom VARCHAR(50),
